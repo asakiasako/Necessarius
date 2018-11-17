@@ -45,7 +45,7 @@ input,
 button,
 select,
 textarea {
-	font-family: 'Fira Sans', sans-serif;
+	font-family: "Helvetica neue", Helvetica, Tahoma, Arial, "PingFang SC", "lantinghei sc", "Microsoft Yahei", "WenQuanYi Micro Hei", sans-serif;
 	transition: all ease-out 0.2s;
 }
 
@@ -61,7 +61,7 @@ a:focus {
 }
 
 h1, h2, h3, h4, h5, h6 {
-	font-family: 'Fira Sans', sans-serif;
+	font-family: "Helvetica neue", Helvetica, Tahoma, Arial, "PingFang SC", "lantinghei sc", "Microsoft Yahei", "WenQuanYi Micro Hei", sans-serif;
 	text-rendering: optimizeLegibility;
 	color: $color-black;
 }
@@ -117,7 +117,7 @@ ol > li:before {
 	position: absolute;
 	width: 1.5em;
 	margin-left: -2em;
-	font-family: 'Fira Sans', sans-serif;
+	font-family: "Helvetica neue", Helvetica, Tahoma, Arial, "PingFang SC", "lantinghei sc", "Microsoft Yahei", "WenQuanYi Micro Hei", sans-serif;
 	font-size: 1em;
 	font-weight: 500;
 	line-height: 1.5em;
@@ -191,7 +191,7 @@ dl {
     padding-left: 30px;
 }
 dl dt {
-    font-family: 'Fira Sans', sans-serif;
+    font-family: "Helvetica neue", Helvetica, Tahoma, Arial, "PingFang SC", "lantinghei sc", "Microsoft Yahei", "WenQuanYi Micro Hei", sans-serif;
   	font-weight: 500;
   	font-size: 0.75em;
   	line-height: 1.25em;
@@ -220,11 +220,11 @@ code, tt {
 	position: relative;
 	margin: 0 0.334em;
 	padding: 0.334em 0.667em;
-	font-family: monospace, sans-serif;
+	font-family: 'Source Code Pro', sans-serif;
 	font-size: 0.75em;
 	white-space: pre;
 	background: $color-gray-98;
-  border: 1px solid $color-gray-90;
+  	border: 1px solid $color-gray-90;
 	top: -2px;
 }
 
@@ -233,10 +233,10 @@ pre {
 	margin: 0 0 2em;
 	padding: 1em;
 	overflow: hidden;
-	font-family: monospace, sans-serif;
+	font-family: "Helvetica neue", Helvetica, Tahoma, Arial, "PingFang SC", "lantinghei sc", "Microsoft Yahei", "WenQuanYi Micro Hei", sans-serif;
 	white-space: pre;
 	background: $color-gray-98;
-  border: 1px solid $color-gray-90;
+  	border: 1px solid $color-gray-90;
 	box-sizing: border-box;
 }
 pre .lines {
@@ -310,7 +310,7 @@ table td {
     border: 1px solid $color-gray-90;
 }
 table th {
-	font-family: 'Fira Sans', sans-serif;
+	font-family: "Helvetica neue", Helvetica, Tahoma, Arial, "PingFang SC", "lantinghei sc", "Microsoft Yahei", "WenQuanYi Micro Hei", sans-serif;
 	font-weight: 500;
 	font-size: 0.75em;
 	line-height: 1.25em;
@@ -364,7 +364,7 @@ img[src$="#full"] {
   }
 
   figcaption {
-    font-family: 'Fira Sans', sans-serif;
+    font-family: "Helvetica neue", Helvetica, Tahoma, Arial, "PingFang SC", "lantinghei sc", "Microsoft Yahei", "WenQuanYi Micro Hei", sans-serif;
     color: $color-blue-60;
     text-align: center;
     max-width: 32em;
@@ -386,7 +386,7 @@ img[src$="#full"] {
   width: 75vw;
 
   figcaption {
-    font-family: 'Fira Sans', sans-serif;
+    font-family: "Helvetica neue", Helvetica, Tahoma, Arial, "PingFang SC", "lantinghei sc", "Microsoft Yahei", "WenQuanYi Micro Hei", sans-serif;
     color: $color-blue-60;
     text-align: center;
     max-width: 32em;
@@ -561,7 +561,7 @@ img[src$="#full"] {
 	z-index: 10;
 	margin: 0;
 	padding: 0;
-	font-family: 'Fira Sans', sans-serif;
+	font-family: "Helvetica neue", Helvetica, Tahoma, Arial, "PingFang SC", "lantinghei sc", "Microsoft Yahei", "WenQuanYi Micro Hei", sans-serif;
 	font-weight: 700;
 	font-size: 2em;
 	line-height: 1em;
@@ -645,7 +645,7 @@ img[src$="#full"] {
 	margin-bottom: 1em;
 	padding: 0.5em 1.25em;
 	border: 1px solid $color-blue-80;
-	font-family: 'Fira Sans', sans-serif;
+	font-family: "Helvetica neue", Helvetica, Tahoma, Arial, "PingFang SC", "lantinghei sc", "Microsoft Yahei", "WenQuanYi Micro Hei", sans-serif;
 	font-size: 0.75em;
 	line-height: 1.667em;
 	text-shadow: none;
@@ -694,7 +694,7 @@ img[src$="#full"] {
 	border-left: 1px solid $color-gray-90;
 	z-index: 400;
 	overflow: hidden;
-	font-family: 'Fira Sans', sans-serif;
+	font-family: "Helvetica neue", Helvetica, Tahoma, Arial, "PingFang SC", "lantinghei sc", "Microsoft Yahei", "WenQuanYi Micro Hei", sans-serif;
 	box-shadow: inset -2px 0 7px rgba(0,0,0,0.1);
 	transform: translate3d(16em,0,0);
 	transition: all ease-out 0.25s;
@@ -850,7 +850,7 @@ img[src$="#full"] {
 #footer {
 	position: relative;
 	z-index: 20;
-	font-family: 'Fira Sans', sans-serif;
+	font-family: "Helvetica neue", Helvetica, Tahoma, Arial, "PingFang SC", "lantinghei sc", "Microsoft Yahei", "WenQuanYi Micro Hei", sans-serif;
 	line-height: 1em;
 	padding-bottom: 6em;
 }
@@ -1035,7 +1035,7 @@ img[src$="#full"] {
 	z-index: 10;
 	display: block;
 	margin-bottom: 1.334em;
-	font-family: 'Fira Sans', sans-serif;
+	font-family: "Helvetica neue", Helvetica, Tahoma, Arial, "PingFang SC", "lantinghei sc", "Microsoft Yahei", "WenQuanYi Micro Hei", sans-serif;
 	font-size: 0.75em;
 	font-weight: 400;
 	line-height: 1.334em;
@@ -1138,7 +1138,7 @@ img[src$="#full"] {
 .post-tags {
 	max-width: 75%;
 	float: left;
-	font-family: 'Fira Sans', sans-serif;
+	font-family: "Helvetica neue", Helvetica, Tahoma, Arial, "PingFang SC", "lantinghei sc", "Microsoft Yahei", "WenQuanYi Micro Hei", sans-serif;
 }
 .post-tags a {
 	display: inline-block;
@@ -1174,7 +1174,7 @@ img[src$="#full"] {
 	border-top: 1px solid $color-gray-90;
 	border-bottom: 1px solid $color-gray-90;
 	clear: both;
-  font-family: 'Fira Sans', sans-serif;
+  font-family: "Helvetica neue", Helvetica, Tahoma, Arial, "PingFang SC", "lantinghei sc", "Microsoft Yahei", "WenQuanYi Micro Hei", sans-serif;
 }
 .post-author-avatar {
 	position: relative;
@@ -1253,7 +1253,7 @@ img[src$="#full"] {
 	border-bottom: 1px solid $color-gray-90;
 	clear: both;
   text-align: center;
-  font-family: 'Fira Sans', sans-serif;
+  font-family: "Helvetica neue", Helvetica, Tahoma, Arial, "PingFang SC", "lantinghei sc", "Microsoft Yahei", "WenQuanYi Micro Hei", sans-serif;
 }
 .post-authors-info {
   margin: 0 0 0.334em;
@@ -1288,7 +1288,7 @@ img[src$="#full"] {
 	margin: 0;
 	padding: 0.5em 1.25em;
 	border: 1px solid $color-blue-80;
-	font-family: 'Fira Sans', sans-serif;
+	font-family: "Helvetica neue", Helvetica, Tahoma, Arial, "PingFang SC", "lantinghei sc", "Microsoft Yahei", "WenQuanYi Micro Hei", sans-serif;
 	font-size: 0.75em;
 	line-height: 1.334em;
 	color: $color-blue-60;
@@ -1453,7 +1453,7 @@ img[src$="#full"] {
 	height: 2em;
 	margin: 0;
 	padding: 2em 0;
-	font-family: 'Fira Sans', sans-serif;
+	font-family: "Helvetica neue", Helvetica, Tahoma, Arial, "PingFang SC", "lantinghei sc", "Microsoft Yahei", "WenQuanYi Micro Hei", sans-serif;
 }
 .pagination:after {
 	position: absolute;

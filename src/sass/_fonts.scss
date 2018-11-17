@@ -76,3 +76,11 @@
   url('../font/fira-sans-v8-latin-700.ttf') format('truetype'), /* Safari, Android, iOS */
   url('../font/fira-sans-v8-latin-700.svg#FiraSans') format('svg'); /* Legacy iOS */
 }
+/* source-code-pro */
+@font-face {
+  font-family: 'Source Code Pro';
+  src: url('../font/SourceCodePro.eot');
+  src: url('../font/SourceCodePro.eot?#iefix') format('embedded-opentype'), 
+  url('../font/SourceCodePro.woff') format('woff'), 
+  url('../font/SourceCodePro.ttf') format('truetype');
+}
