@@ -34,8 +34,9 @@ html.menu-active,
 }
 
 body {
-	font: 400 2em / 1.5em "Helvetica neue", Helvetica, Tahoma, Arial, "PingFang SC", "lantinghei sc", "Microsoft Yahei", "WenQuanYi Micro Hei", sans-serif;
+	font: 400 1.9em / 1.8em "Helvetica neue", Helvetica, Tahoma, Arial, "PingFang SC", "lantinghei sc", "Microsoft Yahei", "WenQuanYi Micro Hei", sans-serif;
 	color: $color-blue-30;
+	text-align: justify;
 	text-rendering: optimizeLegibility;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
@@ -50,7 +51,7 @@ textarea {
 }
 
 a {
-	color: $color-blue-15;
+	color: $color-blue-30;
 	text-decoration: none;
 	font-weight: 400;
 	transition: all ease-out 0.2s;
@@ -97,11 +98,11 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
 }
 
 p {
-    margin: 0 0 2em;
+    margin: 0 0 1.6em;
 }
 
 ul, ol {
-    margin: 0 0 2em;
+    margin: 0 0 1.6em;
     padding-left: 2em;
     box-sizing: border-box;
 }
@@ -145,19 +146,18 @@ ol ol, ul ul, ul ol, ol ul {
 hr {
     display: block;
     height: 1px;
-    margin: 0 0 2em;
-    padding: 0;
-	  background: $color-gray-90;
+    margin: 0 0 1.6em;
+	padding: 0;
     border: 0;
+	border-top: 1px dashed $color-gray-90;
 }
 
 blockquote {
-    margin: 0 0 2em;
+    margin: 0 0 1.6em;
     padding: 1em;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     border-left: 0.25em solid $color-gray-90;
-    font-style: italic;
     font-weight: 400;
     color: $color-blue-30;
     background: $color-gray-98;
@@ -177,7 +177,7 @@ em, i {
 }
 strong, b {
 	font-weight: 700;
-	color: $color-blue-15;
+	color: $color-blue-30;
 }
 
 small {
@@ -187,7 +187,7 @@ small {
 
 
 dl {
-    margin: 0 0 2em;
+    margin: 0 0 1.6em;
     padding-left: 30px;
 }
 dl dt {
@@ -230,7 +230,7 @@ code, tt {
 
 pre {
 	position: relative;
-	margin: 0 0 2em;
+	margin: 0 0 1.6em;
 	padding: 1em;
 	overflow: hidden;
 	font-family: "Helvetica neue", Helvetica, Tahoma, Arial, "PingFang SC", "lantinghei sc", "Microsoft Yahei", "WenQuanYi Micro Hei", sans-serif;
@@ -238,6 +238,7 @@ pre {
 	background: $color-gray-98;
   	border: 1px solid $color-gray-90;
 	box-sizing: border-box;
+	border-radius: 3px;
 }
 pre .lines {
 	position: absolute;
@@ -251,12 +252,12 @@ pre .lines {
 	line-height: 2em;
 	text-align: right;
 	box-sizing: border-box;
-	background: rgba(255,255,255,0.5);
+	background: $color-gray-90;
 }
 pre .lines .line {
 	display: block;
-	padding-right: 0.334em;
-    color: $color-blue-30;
+	padding-right: 0.5em;
+    color: $color-blue-45;
 }
 
 pre code, pre tt {
@@ -296,7 +297,7 @@ kbd {
 table {
 	width: 100%;
 	max-width: 100%;
-	margin: 0 0 2em;
+	margin: 0 0 1.6em;
 	background-color: transparent;
 	border: 1px solid $color-gray-90;
 }
@@ -334,7 +335,7 @@ img {
 	display: block;
 	max-width: 100%;
 	height: auto;
-	margin: 0 0 2em;
+	margin: 0 0 1.6em;
 }
 
 img[src$="#full"] {
@@ -344,7 +345,7 @@ img[src$="#full"] {
 }
 
 .kg-image-card {
-  margin: 0 0 2em;
+  margin: 0 0 1.6em;
   max-width: none !important;
 
   &.kg-width-wide {
@@ -380,7 +381,7 @@ img[src$="#full"] {
 }
 
 .kg-gallery-card {
-  margin: 0 0 2em;
+  margin: 0 0 1.6em;
   max-width: 48em !important;
   min-width: 100%;
   width: 75vw;
@@ -424,7 +425,7 @@ img[src$="#full"] {
 }
 
 .kg-embed-card {
-  margin: 0 0 2em;
+  margin: 0 0 1.6em;
 
   > * {
     margin-left: auto;
@@ -433,7 +434,7 @@ img[src$="#full"] {
 }
 
 .fluid-width-video-wrapper {
-	margin: 0 0 2em;
+	margin: 0 0 1.6em;
 }
 
 .clear {
@@ -617,7 +618,7 @@ img[src$="#full"] {
 
 
 .inner {
-	max-width: 32em;
+	max-width: 48em;
 	margin: 0 auto;
 	padding: 0 2em;
 }
@@ -1016,11 +1017,11 @@ img[src$="#full"] {
 	position: relative;
 	z-index: 10;
 	margin: 0 0 0.25em;
-	font-size: 2em;
+	font-size: 2.6em;
 	line-height: 1em;
-	font-weight: 700;
-	text-indent: -1px;
-	color: $color-black;
+  font-weight: 700;
+  text-align: center;
+	color: $color-blue-30;
 }
 .has-cover .post-title {
 	color: $color-white;
@@ -1033,17 +1034,27 @@ img[src$="#full"] {
 .post-meta {
 	position: relative;
 	z-index: 10;
-	display: block;
-	margin-bottom: 1.334em;
+	display: flex;
+	margin: 1.8em 0 1.6em;
 	font-family: "Helvetica neue", Helvetica, Tahoma, Arial, "PingFang SC", "lantinghei sc", "Microsoft Yahei", "WenQuanYi Micro Hei", sans-serif;
 	font-size: 0.75em;
 	font-weight: 400;
 	line-height: 1.334em;
   color: $color-blue-60;
 }
+.post-template .post-meta {
+	margin-top: 3.2em;
+}
 .has-cover .post-meta {
 	color: $color-white;
 	opacity: 0.75;
+}
+.post-meta-inner {
+  margin: 0 auto;
+  padding: 5px 10px;
+  border: 1px solid $color-gray-90;
+  border-left: none;
+  border-right: none;
 }
 .post-meta a {
 	color: inherit;
@@ -1062,10 +1073,16 @@ img[src$="#full"] {
 	margin: 0.5em 0 0;
 }
 .post-content {
+	font-size: 0.9em;
   padding: 2em 0;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+@media screen and (min-width: 1600px) {
+	.post-content {
+		font-size: 1em;
+	}
 }
 .post-content > * {
   min-width: 100%;
@@ -1565,7 +1582,7 @@ img[src$="#full"] {
 	.post-tags {
 		max-width: none;
 		float: none;
-		margin: 0 0 2em;
+		margin: 0 0 1.6em;
 	}
 	.post-share a {
 		margin-left: 0;
