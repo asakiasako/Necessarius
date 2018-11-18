@@ -64,7 +64,7 @@ a:focus {
 h1, h2, h3, h4, h5, h6 {
 	font-family: "Helvetica neue", Helvetica, Tahoma, Arial, "PingFang SC", "lantinghei sc", "Microsoft Yahei", "WenQuanYi Micro Hei", sans-serif;
 	text-rendering: optimizeLegibility;
-	color: $color-black;
+	color: $color-blue-30;
 }
 
 h1 {
@@ -75,20 +75,20 @@ h1 {
 }
 
 h2 {
-	font-size: 1.75em;
+	font-size: 1.4em;
 	line-height: 1.111em;
 	text-indent: -1px;
 	margin: 1.143em 0 1.143em;
 }
 
 h3 {
-	font-size: 1.5em;
+	font-size: 1.2em;
 	line-height: 1.334em;
 	margin: 1em 0 1em;
 }
 
 h4 {
-	font-size: 1.25em;
+	font-size: 1em;
 	line-height: 1.2em;
 	margin: 1.2em 0 1.2em;
 }
@@ -537,12 +537,12 @@ img[src$="#full"] {
 .blog-cover:after {
 	position: absolute;
 	width: 100%;
-	height: 6em;
+	height: 100%;
 	left: 0;
 	bottom: 0;
 	z-index: 8;
 	content: '';
-	background: linear-gradient(to bottom,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.5) 100%);
+	background: linear-gradient(to right, rgba(0,0,0,90) 0%, rgba(0,0,0,0.5) 50%, rgba(0,0,0,90) 100%);
 }
 .blog-logo {
 	position: fixed;
@@ -569,7 +569,7 @@ img[src$="#full"] {
 	text-decoration: none;
 }
 .home-template .blog-name {
-	font-size: 3em;
+	font-size: 2.4em;
 }
 .has-cover .blog-name {
 	color: $color-white;
@@ -580,6 +580,7 @@ img[src$="#full"] {
 	color: inherit;
 }
 .blog-description {
+  color: $color-blue-45;
 	position: relative;
 	display: block;
 	z-index: 10;
@@ -589,7 +590,7 @@ img[src$="#full"] {
 	line-height: 1.5em;
 }
 .home-template .blog-description {
-	font-size: 1.5em;
+	font-size: 1.4em;
 }
 .has-cover .blog-description {
 	color: $color-white;
@@ -1072,6 +1073,20 @@ img[src$="#full"] {
 .post-excerpt p {
 	margin: 0.5em 0 0;
 }
+.post-read-more {
+  font-weight: 500;
+	display: block;
+	width: 96px;
+	text-align: center;
+	margin: 0 auto;
+	font-size: 0.85em;
+	background: $color-blue-30;
+	color: #FFF;
+}
+.post-read-more:hover {
+  background: $primary-color;
+  color: #FFF;
+}
 .post-content {
 	font-size: 0.9em;
   padding: 2em 0;
@@ -1097,12 +1112,15 @@ img[src$="#full"] {
 		margin-top: 0;
 	}
 }
-.post-content a {
-	border-bottom: 1px solid $primary-color;
+.post-content a, .post-excerpt a {
+	border-bottom: 1px solid;
 }
 .post-content a:hover,
-.post-content a:focus {
-	color: $primary-color;
+.post-content a:focus,
+.post-excerpt a:hover,
+.post-excerpt a:focus {
+  color: $primary-color;
+  border-color: $primary-color;
 }
 
 /* ==========================================================================
@@ -1576,7 +1594,7 @@ img[src$="#full"] {
 
 @media only screen and (max-width: 640px) {
 	html {
-	    font-size: 50%;
+	    font-size: 60%;
 	}
 	.post-share,
 	.post-tags {

@@ -11,10 +11,12 @@
 			<div class="post-meta"><span class="post-meta-inner">{{authors separator=", "}} {{tags prefix=(t "on ") separator=", "}} × <time datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMM YYYY"}}</time></span></div>
 			<div class="clear"></div>
 		</header>
-
 		<section class="post-excerpt">
-			<p>{{excerpt}}&hellip;</p>
+			<p>{{content words="40"}}&hellip;</p>
 		</section>
+		<a class="post-read-more" href="{{url}}">
+			阅读全文
+		</a>
 	</div>
 </article>
 
