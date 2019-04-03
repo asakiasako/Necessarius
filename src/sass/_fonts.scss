@@ -7,3 +7,12 @@
   url('../font/SourceCodePro.woff') format('woff'), 
   url('../font/SourceCodePro.ttf') format('truetype');
 }
+
+/* yanSong */
+@font-face {
+  font-family: 'Yan Song';
+  src: url('../font/YanSong.eot');
+  src: url('../font/YanSong.eot?#iefix') format('embedded-opentype'), 
+  url('../font/YanSong.woff') format('woff'), 
+  url('../font/YanSong.ttf') format('truetype');
+}

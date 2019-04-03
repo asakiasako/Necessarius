@@ -5,32 +5,6 @@ jQuery(function($) {
 	var viewport = $(window);
 
 	/* ==========================================================================
-	   Menu
-	   ========================================================================== */
-
-	function menu() {
-		html.toggleClass('menu-active');
-	};
-
-	$('#menu').on({
-		'click': function() {
-			menu();
-		}
-	});
-
-	$('.menu-button').on({
-		'click': function() {
-			menu();
-		}
-	});
-
-	$('.hidden-close').on({
-		'click': function() {
-			menu();
-		}
-	});
-
-	/* ==========================================================================
 	   Parallax cover
 	   ========================================================================== */
 
@@ -63,6 +37,14 @@ jQuery(function($) {
 	});
 
 	/* ==========================================================================
+	   Arrow Up
+	   ========================================================================== */
+	$('.arrow-up').click(function () {
+        var scrollTop = $('.content').offset().top - $('#nav-header').height();
+        $('html,body').animate({scrollTop: scrollTop}, 500);
+    });
+
+	/* ==========================================================================
 	   Reading Progress
 	   ========================================================================== */
 
@@ -92,8 +74,29 @@ jQuery(function($) {
 	});
 
 	/* ==========================================================================
-	   Gallery
+	   Nav Header
 	   ========================================================================== */
+	function headerResize() {
+		var navHeader = $('#nav-header');
+		var postHeader = $('#post-header');
+
+		var navHeaderHeight = navHeader.innerHeight()
+		var postHeaderHeight = (postHeader.length >= 1) ? postHeader.innerHeight() : 200;
+		var scrolled = viewport.scrollTop();
+		(scrolled > postHeaderHeight) ? navHeader.addClass('full-width') : navHeader.removeClass('full-width');
+	}
+
+	viewport.on({
+		'scroll': function() {
+			headerResize();
+		},
+		'resize': function() {
+			headerResize();
+		},
+		'orientationchange': function() {
+			headerResize();
+		}
+	});
 
 	function gallery() {
 		var images = document.querySelectorAll('.kg-gallery-image img');

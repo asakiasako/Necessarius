@@ -7,6 +7,7 @@
 @import "icons";
 @import "fonts";
 @import "highlight";
+@import "animate";
 
 /* ==========================================================================
    Basics
@@ -73,6 +74,7 @@ h6 {
   font-family: "Helvetica neue", Helvetica, Tahoma, Arial, "PingFang SC", "lantinghei sc", "Microsoft Yahei", "WenQuanYi Micro Hei", sans-serif;
   text-rendering: optimizeLegibility;
   color: $color-blue-30;
+  font-weight: normal;
 }
 
 h1 {
@@ -180,7 +182,6 @@ blockquote {
   padding: 1em;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  border-left: 0.25em solid $color-gray-90;
   font-weight: 400;
   color: $color-blue-30;
   background: $color-gray-98;
@@ -531,6 +532,64 @@ img[src$="#full"] {
 }
 
 /* ==========================================================================
+   Cover
+   ========================================================================== */
+
+#blog-cover {
+  height: 100vh;
+  overflow: hidden;
+  margin-top: -54px;
+  position: relative;
+  padding-right: 0;
+  transition: all ease-out 0.25s;
+}
+
+#blog-cover h1.blog-name {
+  text-align: center;
+  font-family: 'Yan Song';
+  color: rgba(255,255,255, 0.95);
+  font-weight: normal;
+  font-size: 3em;
+  margin-bottom: 16px;
+  text-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
+
+#blog-cover .blog-icon {
+  height: 100px;
+  display: block;
+  position: relative;
+  z-index: 200;
+  margin-bottom: 24px;
+}
+
+#blog-cover .blog-desc {
+  margin-bottom: 80px;
+  font-size: 22px;
+  color: rgba(255,255,255,.85);
+  position: relative;
+  z-index: 200;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.3);
+}
+
+#blog-cover .arrow-up {
+  position: absolute;
+  z-index: 300;
+  bottom: 0;
+  width: 32px;
+  left: 50%;
+  margin-left: -24px;
+  padding: 8px;
+  -webkit-animation: bounce 3s 2s infinite;
+  animation: bounce 3s 2s infinite;
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+#blog-cover .arrow-up:hover {
+  opacity: 1;
+}
+
+/* ==========================================================================
    Header
    ========================================================================== */
 
@@ -580,7 +639,10 @@ img[src$="#full"] {
   top: 0;
   z-index: 5;
   background: no-repeat scroll center center / cover $color-black;
-  animation: 0.5s ease-in forwards fadein;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .blog-cover:after {
@@ -591,7 +653,7 @@ img[src$="#full"] {
   bottom: 0;
   z-index: 8;
   content: '';
-  background: linear-gradient(to right, rgba(0, 0, 0, 90) 0%, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 90) 100%);
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.15) 30%, rgba(0, 0, 0, 0.4) 100%);
 }
 
 .blog-logo {
@@ -619,10 +681,6 @@ img[src$="#full"] {
   font-size: 2em;
   line-height: 1em;
   text-decoration: none;
-}
-
-.home-template .blog-name {
-  font-size: 2.4em;
 }
 
 .has-cover .blog-name {
@@ -655,6 +713,7 @@ img[src$="#full"] {
 }
 
 #wrapper {
+  margin-top: 54px;
   position: relative;
   padding-right: 0;
   transition: all ease-out 0.25s;
@@ -685,229 +744,129 @@ img[src$="#full"] {
   padding: 0 2em;
 }
 
+
 /* ==========================================================================
-   Navigation
+   Nav Header
    ========================================================================== */
 
-#navigation {}
-
-.nav-button {
+#nav-header {
   position: fixed;
-  top: 0;
-  margin: 1em;
-  z-index: 200;
+  z-index: 100;
+  width: 100%;
+  background: #FFF;
 }
 
-.nav-button#home-button {
-  left: 0;
-}
-
-.nav-button#menu-button {
-  right: 0;
-}
-
-.nav-button a {
-  display: block;
-  height: 1.5em;
-  margin-bottom: 1em;
-  padding: 0.5em 1.25em;
-  border: 1px solid $color-blue-80;
-  font-family: "Helvetica neue", Helvetica, Tahoma, Arial, "PingFang SC", "lantinghei sc", "Microsoft Yahei", "WenQuanYi Micro Hei", sans-serif;
-  font-size: 0.75em;
-  line-height: 1.667em;
-  text-shadow: none;
-  color: $color-blue-60;
-  cursor: pointer;
-  background: $color-white;
-  transition: color, border-color ease 0.3s;
-  border-radius: 2em;
-}
-
-.nav-button a:hover,
-.nav-button a:focus {
-  color: $primary-color;
-  border-color: $primary-color;
-}
-
-.cover-active .nav-button a {
-  color: $color-white;
-  border-color: rgba(255, 255, 255, 0.5);
+.home-template #nav-header {
   background: transparent;
 }
 
-.cover-active .nav-button a:hover,
-.cover-active .nav-button a:focus {
-  color: $color-white;
-  border-color: $color-white;
+#nav-header.full-width {
+  background: rgba(255,255,255,.97) !important;
 }
 
-.nav-button a i {
+#nav-header .nav-header-inner {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  max-width: 100%;
+  width: 54em;
+  margin: 0 auto;
+  transition: all .4s cubic-bezier(.4,0,0,1);
+  border-bottom: 1px solid $color-gray-90;
+}
+
+.home-template #nav-header .nav-header-inner {
+  border-bottom: none;
+}
+
+#nav-header.full-width .nav-header-inner {
+  color: $color-blue-15 !important;
+  text-shadow: none !important;
+  width: 100%;
+  padding: 0 20px;
+  border-bottom-color: transparent;
+  box-shadow: 0 4px 12px 0 rgba(0,0,0,.05);
+}
+
+#nav-header .blog-name {
+  font-size: 1.1em;
+  font-weight: normal;
+  line-height: 34px;
+  padding: 10px;
+  color: $color-blue-15;
+  font-family: 'Yan Song', 'Songti SC', 'STIX', serif;
+}
+
+.home-template #nav-header .blog-name {
+  color: rgba(255,255,255,.85);
+  text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+}
+
+#nav-header.full-width .blog-name {
+  color: $color-blue-15 !important;
+  text-shadow: none !important;
+}
+
+#nav-header .nav-title {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  left: 0;
+  top: 0;
+  box-sizing: border-box;
+  padding: 10px;
+  opacity: 0;
+  transition: all .4s cubic-bezier(.4,0,0,1);
+}
+
+#nav-header .nav-title span {
   display: inline-block;
-  color: inherit;
-}
-
-.nav-button a i:before {
-  position: relative;
-  width: auto;
-  margin: auto;
-}
-
-/* ==========================================================================
-   Menu
-   ========================================================================== */
-
-#menu {
-  position: fixed;
-  width: 16em;
-  height: 100%;
-  top: 0;
-  right: 0;
-  background: $color-gray-95;
-  border-left: 1px solid $color-gray-90;
-  z-index: 400;
+  white-space: nowrap;
   overflow: hidden;
-  font-family: "Helvetica neue", Helvetica, Tahoma, Arial, "PingFang SC", "lantinghei sc", "Microsoft Yahei", "WenQuanYi Micro Hei", sans-serif;
-  box-shadow: inset -2px 0 7px rgba(0, 0, 0, 0.1);
-  transform: translate3d(16em, 0, 0);
-  transition: all ease-out 0.25s;
+  text-overflow: ellipsis;
+  max-width: 450px;
 }
 
-.menu-active #menu {
-  transform: translate3d(0, 0, 0);
+#nav-header.full-width .nav-title {
+  opacity: 1;
 }
 
-#menu .close-button {
-  position: absolute;
-  width: 2em;
-  height: 2em;
-  top: 0;
-  right: 0;
-  margin: 1em;
-  border: 1px solid $color-blue-80;
-  color: transparent;
-  cursor: pointer;
-  transition: all ease 0.3s;
-  border-radius: 2em;
-  box-sizing: border-box;
-  z-index: 500;
-}
-
-#menu .close-button:hover,
-#menu .close-button:focus {
-  transform: rotate(180deg);
-  border-color: $primary-color;
-}
-
-#menu .close-button:after,
-#menu .close-button:before {
-  position: absolute;
-  width: 1em;
-  height: 1px;
-  left: 50%;
-  top: 50%;
-  margin-left: -0.5em;
-  content: '';
-  background: $color-blue-60;
-  transition: all ease 0.3s;
-}
-
-#menu .close-button:hover:after,
-#menu .close-button:hover:before,
-#menu .close-button:focus:after,
-#menu .close-button:focus:before {
-  background: $primary-color;
-}
-
-#menu .close-button:after {
-  transform: rotate(45deg);
-}
-
-#menu .close-button:before {
-  transform: rotate(-45deg);
-}
-
-#menu .nav-wrapper {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  overflow-x: hidden;
-  overflow-y: scroll;
-  box-sizing: border-box;
-}
-
-#menu .nav-label {
-  display: block;
-  padding: 1.667em 2em;
+.nav-wrapper ul {
+  display: flex;
   margin: 0;
-  opacity: 0.5;
-  font-size: 0.75em;
-  line-height: 2em;
 }
 
-#menu ul {
-  position: relative;
-  width: 100%;
-  margin: auto;
-  padding: 0;
+.nav-wrapper ul>li a {
+  display: inline-block;
+  padding: 10px;
+  font-size: 0.8em;
+  line-height: 34px;
+  color: $color-blue-15;
 }
 
-#menu li {
-  position: relative;
+.home-template .nav-wrapper ul>li a {
+  color: rgba(255,255,255,0.7);
+  text-shadow: 0 1px 2px rgba(0,0,0,0.3);
 }
 
-#menu li:before {
-  position: absolute;
-  width: 100%;
-  height: 1px;
-  left: 1.5em;
-  bottom: 0;
-  margin: auto;
+.home-template .nav-wrapper ul>li a:hover {
+  color: rgba(255,255,255,0.85);
+}
+
+#nav-header.full-width .nav-wrapper ul>li a {
+  color: $color-blue-15 !important;
+  text-shadow: none;
+}
+
+#nav-header.full-width .nav-wrapper ul>li a:hover {
+  color: $color-blue-15 !important;
+}
+
+.nav-wrapper ul>li::before {
   content: '';
-  background: rgba(0, 0, 0, 0.1);
-}
-
-#menu li:last-child:before {
   display: none;
 }
 
-#menu li.active {}
-
-#menu li.active:after {
-  position: absolute;
-  content: '';
-  width: 0.2em;
-  height: 100%;
-  left: 0;
-  top: 0;
-  background: $primary-color;
-}
-
-#menu li a {
-  display: block;
-  padding: 1.25em 1.5em;
-  color: $color-blue-15;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  font-weight: 400;
-}
-
-#menu li a:hover,
-#menu li a:focus {
-  color: $color-black;
-  background: rgba(0, 0, 0, 0.05);
-}
-
-#menu li a i {
-  position: relative;
-  top: -1px;
-  font-size: 0.8em;
-  color: inherit;
-}
-
-#menu li.active a {
-  color: $color-black;
-  font-weight: 500;
-}
 
 /* ==========================================================================
    Reading Progress
@@ -931,9 +890,8 @@ img[src$="#full"] {
 .progress-bar {
   display: block;
   width: 0;
-  height: 1px;
+  height: 2px;
   background: $primary-color;
-  box-shadow: 0 0 1px $primary-color, 0 0 3px $primary-color;
 }
 
 /* ==========================================================================
@@ -941,11 +899,12 @@ img[src$="#full"] {
    ========================================================================== */
 
 #footer {
+  background: $color-blue-15;
   position: relative;
   z-index: 20;
   font-family: "Helvetica neue", Helvetica, Tahoma, Arial, "PingFang SC", "lantinghei sc", "Microsoft Yahei", "WenQuanYi Micro Hei", sans-serif;
   line-height: 1em;
-  padding-bottom: 6em;
+  padding: 1.2em 0;
 }
 
 .credits {
@@ -954,7 +913,7 @@ img[src$="#full"] {
   line-height: 1em;
   padding: 1.1em 0;
   overflow: auto;
-  opacity: 0.5;
+  color: $color-blue-80;
 }
 
 .credits a {
@@ -980,6 +939,10 @@ img[src$="#full"] {
 /* ==========================================================================
    Index
    ========================================================================== */
+
+  .post-header {
+    margin-bottom: 48px;
+  }
 
 #blog-author {
   position: relative;
@@ -1042,13 +1005,17 @@ img[src$="#full"] {
 
 .container .post:after {
   position: absolute;
-  width: 32em;
+  width: 48em;
   height: 1px;
   left: 50%;
   bottom: 0;
-  margin-left: -16em;
+  margin-left: -24em;
   content: '';
-  background: $color-gray-90;
+  background: $color-gray-95;
+}
+
+.container .post:last-child::after {
+  content: none;
 }
 
 .container .post.featured .post-title:after {
@@ -1141,6 +1108,10 @@ img[src$="#full"] {
   color: $color-blue-30;
 }
 
+.post-title a:hover {
+  color: $primary-color;
+}
+
 .has-cover .post-title {
   color: $color-white;
 }
@@ -1198,6 +1169,7 @@ img[src$="#full"] {
 
 .post-excerpt {
   font-size: 0.9em;
+  line-height: 1.8em;
 }
 
 .post-excerpt p {
@@ -1212,16 +1184,17 @@ img[src$="#full"] {
   margin: 0 auto;
   font-size: 0.85em;
   background: $color-blue-30;
-  color: #FFF;
+  color: rgba($color: #fff, $alpha: 0.95);
 }
 
 .post-read-more:hover {
   background: $primary-color;
-  color: #FFF;
+  color: rgba($color: #fff, $alpha: 0.9);
 }
 
 .post-content {
   font-size: 0.9em;
+  line-height: 1.8em;
   padding: 2em 0;
   display: flex;
   flex-direction: column;
@@ -1572,6 +1545,7 @@ img[src$="#full"] {
 
 .post-nav {
   position: relative;
+  padding: 10px 0;
   border-bottom: 1px solid $color-gray-90;
 }
 
@@ -1653,6 +1627,7 @@ img[src$="#full"] {
   height: 2em;
   margin: 0;
   padding: 2em 0;
+  border-top: 1px solid $color-gray-95;
   font-family: "Helvetica neue", Helvetica, Tahoma, Arial, "PingFang SC", "lantinghei sc", "Microsoft Yahei", "WenQuanYi Micro Hei", sans-serif;
 }
 
@@ -1707,6 +1682,7 @@ img[src$="#full"] {
 }
 
 .pagination .pagination-info {
+  color: $color-blue-45;
   position: absolute;
   width: 100%;
   height: 2.667em;
@@ -1732,10 +1708,30 @@ img[src$="#full"] {
 }
 
 /* ==========================================================================
+   Media Queries - Smaller than 1066px
+   ========================================================================== */
+
+#nav-header .nav-header-inner {
+  padding: 0 20px;
+}
+
+/* ==========================================================================
    Media Queries - Smaller than 960px
    ========================================================================== */
 
 @media only screen and (max-width: 960px) {
+  #nav-header .nav-title {
+    display: none;
+  }
+
+  #menu {
+    display: none;
+  }
+
+  #nav-header .nav-header-inner {
+    justify-content: center;
+  }
+
   #wrapper {
     transform: translate3d(0, 0, 0);
   }
@@ -1811,10 +1807,6 @@ img[src$="#full"] {
 @media only screen and (max-width: 480px) {
   #blog-header.has-cover {
     padding: 6em 0 6em;
-  }
-
-  .home-template .blog-name {
-    font-size: 2em;
   }
 
   .home-template .blog-description {
