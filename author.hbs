@@ -1,19 +1,19 @@
 {{!< default}}
 
 {{#author}}
-<header id="blog-header"{{#if cover_image}} class="has-cover"{{else}}{{#if @blog.cover_image}} class="has-cover"{{/if}}{{/if}}>
+<header id="blog-header"{{#if cover_image}} class="has-cover"{{else}}{{#if @site.cover_image}} class="has-cover"{{/if}}{{/if}}>
 	<div class="inner">
 		{{#if cover_image}}
 		<div class="blog-cover cover" style="background-image: url('{{img_url cover_image}}');"></div>
 		{{else}}
-		{{#if @blog.cover_image}}
-		<div class="blog-cover cover" style="background-image: url('{{img_url @blog.cover}}');"></div>
+		{{#if @site.cover_image}}
+		<div class="blog-cover cover" style="background-image: url('{{img_url @site.cover}}');"></div>
 		{{/if}}
 		{{/if}}
 	</div>
 </header>
 
-<section id="blog-author"{{#if cover_image}} class="has-cover"{{else}}{{#if @blog.cover_image}} class="has-cover"{{/if}}{{/if}}>
+<section id="blog-author"{{#if cover_image}} class="has-cover"{{else}}{{#if @site.cover_image}} class="has-cover"{{/if}}{{/if}}>
 	<div class="inner">
 
 		<aside class="post-author">

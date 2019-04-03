@@ -1,12 +1,12 @@
 {{!< default}}
 
-{{#if @blog.cover_image}}
+{{#if @site.cover_image}}
 	<header id="blog-cover">
 		<div class="inner">
-			<div class="blog-cover cover" style="background-image: url('{{img_url @blog.cover_image}}');">
-				<img class="blog-icon" src="{{@blog.icon}}"/>
-				<h1 class="blog-name"><a href="{{@blog.url}}">{{@blog.title}}</a></h1>
-				<p class="blog-desc">{{@blog.description}}</p>
+			<div class="blog-cover cover" style="background-image: url('{{img_url @site.cover_image}}');">
+				<img class="blog-icon" src="{{@site.icon}}"/>
+				<h1 class="blog-name"><a href="{{@site.url}}">{{@site.title}}</a></h1>
+				<p class="blog-desc">{{@site.description}}</p>
 			</div>
 			<img class="arrow-up" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxOC4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IuWbvuWxgl8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCINCgkgdmlld0JveD0iMCAwIDIwMCAyMDAiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDIwMCAyMDAiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPHBhdGggb3BhY2l0eT0iMC44IiBmaWxsPSIjRkZGRkZGIiBkPSJNMjAwLDYwbC0xOS45LTE5LjlMMTAwLDEyMC4xTDE5LjksNDAuMUwwLDYwbDEwMCwxMDBMMjAwLDYweiIvPg0KPC9zdmc+DQo="/>
 		</div>
